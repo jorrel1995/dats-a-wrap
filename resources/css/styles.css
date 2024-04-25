@@ -1,0 +1,60 @@
+/* Styles for the navigation bar */
+.navbar {
+    background-color: #333; /* Background color */
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content {
+    padding: 20px;
+}
+#video-banner {
+    position: relative;
+    width: 100vw; /* Set width to 100vw (viewport width) */
+    height: 100vh; /* Set height to 100vh (viewport height) */
+    overflow: hidden;
+}
+
+#video-banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set width to 100% to cover the entire width */
+    height: 100%; /* Set height to 100% to cover the entire height */
+    object-fit: cover;
+}
+
+#video-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Additional styles for the content */
+#video-content h1 {
+    font-size: 3rem;
+}
+
+#video-content p {
+    font-size: 1.5rem;
+}
