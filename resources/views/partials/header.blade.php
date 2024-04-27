@@ -1,114 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>{{$page->title}}</title>
-		<meta name="description" content="{!! $page->meta_description !!}">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link href="/css/app.css" rel="stylesheet">
-		<script src="https://kit.fontawesome.com/41131f2a3b.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!-- Link Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Link Custom CSS -->
-    <link rel="stylesheet" href="styles.css">		<link href="/css/fa-css/all.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.typekit.net/ije4get.css">
-		<script src="https://www.google.com/recaptcha/api.js?render=6LdPVrcpAAAAAO0pjxTphkhvZCmc4juZxy-oz7HU"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-
-		<link rel="apple-touch-icon" sizes="57x57" href="/images/icon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/images/icon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/images/icon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/images/icon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/images/icon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/images/icon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/images/icon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/images/icon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="/images/icon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/images/icon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
-		<link rel="manifest" href="/images/icon/manifest.json">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
-
-
- 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha256-qvCL5q5O0hEpOm1CgOLQUuHzMusAZqDcAZL9ijqfOdI=" crossorigin="anonymous" />
-
-		 <style>
-    #video-banner {
-        position: relative;
-        width: 100vw; /* Set width to 100vw (viewport width) */
-        height: 100vh; /* Set height to 100vh (viewport height) */
-        overflow: hidden;
-    }
-
-    #video-banner video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; /* Set width to 100% to cover the entire width */
-        height: 100%; /* Set height to 100% to cover the entire height */
-        object-fit: cover;
-    }
-
-    #video-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #fff;
-        text-align: center;
-        z-index: 1;
-    }
-
-    /* Additional styles for the content */
-    #video-content h1 {
-        font-size: 3rem;
-    }
-
-    #video-content p {
-        font-size: 1.5rem;
-    }
-</style>
-
-
-	</head>
-	<body>
-	<header>
-        @php
-// Get the current URL
-$url = Request::url();
-
-// Parse the URL to get the path
-$path = parse_url($url, PHP_URL_PATH);
-
-// Get the last segment of the path, which represents the slug
-$slug = basename($path);
-        @endphp
-  <!-- Bootstrap Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand mr-auto" href="/">
-                <img src="{{ Storage::url('pages/DAWlogo.png') }}" alt="Logo" style="max-height: 40px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    @foreach(Page::getAllActive() as $page)
-                    <li class="nav-item active">
-                        <a class="nav-link"   href="{{ $page->slug }}">
-                        {{ $page->title }}
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Creative - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Your Favorite Place for Free Bootstrap Themes</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
+                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">We've got what you need!</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
+                        <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">At Your Service</h2>
+                <hr class="divider" />
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Sturdy Themes</h3>
+                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Up to Date</h3>
+                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Ready to Publish</h3>
+                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Made with Love</h3>
+                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio-->
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
                         </a>
-                    </li>
-                    @endforeach
-                </ul>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-</header>
-</div>
+        <!-- Call to action-->
+ 
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
