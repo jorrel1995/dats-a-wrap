@@ -3,7 +3,7 @@
             <!-- Image with Text (Left Column) -->
             <div class="col-md-6">
                 <div class="text-center">
-                    <img src="{{Storage::url($page->image) }}" class="img-fluid" alt="Image">
+                    <img src="{{Storage::url($page->image) }}" class="img-fluid" alt="Contact Form Image">
                 </div>
             </div>
             <!-- Form (Right Column) -->
@@ -34,8 +34,9 @@
                                     <i class="fas fa-long-arrow-alt-right float-right mt-1"></i>
                                 </button>
                             </div>
-    </form>
-    </div>
+                    </form>
+            </div>
+        </div>
     </div>
 
     @if(Session::has('success'))

@@ -21,10 +21,10 @@ class EnquiryController extends Controller
     public function enquiry(Request $request)
     {
         try {
-            // $captcha = $this->checkRecaptcha();
-            // if (!$captcha) {
-            //     return redirect()->back()->with('danger', 'Sorry, we were unable to submit your request. Please try again and contact us if this error persists.');
-            // }
+            $captcha = $this->checkRecaptcha();
+            if (!$captcha) {
+                return redirect()->back()->with('danger', 'Sorry, we were unable to submit your request. Please try again and contact us if this error persists.');
+            }
             $store = $request->except('_token');
 
             $item = Model::create($store);
@@ -52,11 +52,11 @@ class EnquiryController extends Controller
     public function checkRecaptcha()
     {
         try {
-            if (Auth::guard('admin')->check()) {
-                return true;
-            }
+            // if (Auth::guard('admin')->check()) {
+            //     return true;
+            // }
 
-            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=6LdPVrcpAAAAANeXHr_5tU-5YX6RTviZJ-Dtz6Pk&response=' . Request()->token;
+            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=6Ld8BN4pAAAAALbaT0HMJNag4opG2RN34KZgPiYU&response=' . Request()->token;
             $response = file_get_contents($url);
             $responseKeys = json_decode($response, true);
 

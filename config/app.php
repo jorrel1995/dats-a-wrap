@@ -183,7 +183,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'Page' => App\Models\Page::class,
-        'Enquiry' => App\Models\Enquiry::class,
+        'Enquiry' => App\Enquiry::class,
+        'Setting' => App\Models\Setting::class,
     ])->toArray(),
 
 ];
