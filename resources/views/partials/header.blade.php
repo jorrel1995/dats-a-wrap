@@ -7,6 +7,10 @@
        <title>{{ $page->title }}</title>
         <meta name="description" content="{!! $page->meta_description !!}">
         <script src="https://www.google.com/recaptcha/api.js?render=6Ld8BN4pAAAAAJzVLVMCYcUtUfuQN89c3iXxhotO"></script>
+        <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
