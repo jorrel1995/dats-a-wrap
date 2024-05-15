@@ -194,10 +194,7 @@
                                 <a href="http://tnscatering.cherrytest.com/images/tns-logo.svg"><img src="http://tnscatering.cherrytest.com/images/tns-logo.svg"></a>
                             </td>
                             <td class="social">
-                                    <span> <a href=" {{ Setting::facebook() }}" target="_blank"><img src="http://tnscatering.cherrytest.com/images/tns-facebook.svg"></a></span>
-                                    <span><a href="{{ Setting::twitter() }}"><img src="http://tnscatering.cherrytest.com/images/tns-twitter.svg"></a></span>
-                                    <span><a href="{{ Setting::linkedin() }}"><img src="http://tnscatering.cherrytest.com/images/tns-linkedin.svg"></a></span>
-                                    <span><a href="{{ Setting::instagram() }}"><img src="http://tnscatering.cherrytest.com/images/tns-instagram.svg"></a></span>
+
                                </td>
                         </tr>
                     </table>
