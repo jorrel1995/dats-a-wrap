@@ -30,10 +30,10 @@
             "email" : "",
             "address" : {
                 "@type" : "PostalAddress",
-                "streetAddress" : "Albion Strategic Consulting, Unit 7, The Boat Shed, Michael Browning Way",
-                "addressRegion" : "Exeter",
+                "streetAddress" : "",
+                "addressRegion" : "",
                 "addressCountry" : "United Kingdom",
-                "postalCode" : "EX2 8DD"
+                "postalCode" : ""
             },
             "url" : "{{ URL::current() }}"
         }
