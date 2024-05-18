@@ -30,6 +30,9 @@ class PageController extends Controller
         if(empty($files)) {
             $files = [];
         }
+        if(empty($banner)) {
+            $banner = '';
+        }
         
         return view('view')->with('slug', $slug)
             ->with('banner', $banner)
