@@ -1,6 +1,16 @@
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">
+                {{ setting('admin.title') }} 
+                @if(setting('admin.instagram'))
+                <a href="{{ setting('admin.instagram') }}" target="_blank" class="me-4"><i class="fab fa-instagram"></i></a>
+                @endif
+                @if(setting('admin.twitter'))
+                <a href="{{ setting('admin.twitter') }}" target="_blank" class="me-4"><i class="fab fa-twitter"></i></a>
+                @endif
+            </div>
+        </div>
         </footer>
          <!-- Bootstrap core JS-->
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
