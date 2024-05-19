@@ -26,12 +26,9 @@ class PageController extends Controller
         }
         // Get all files from the specific folder
         $gallery = Storage::disk('public')->files('/pages/Home/Gallery');
-        $banner = Storage::disk('public')->files('/pages/Home/Banner')[0];
+        $banner = Storage::disk('public')->files('/pages/Home/Banner')[0] ? Storage::disk('public')->files('/pages/Home/Banner')[0] : '';
         if(empty($files)) {
             $files = [];
-        }
-        if(empty($banner)) {
-            $banner = '';
         }
         
         return view('view')->with('slug', $slug)
