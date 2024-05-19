@@ -11,7 +11,7 @@
              @else
             <div class="carousel-item">
             @endif
-            <img class="d-block w-100" src="{{ Storage::url($file) }}" alt="Gallery Image {{ $loop->iteration }} ">
+            <img class="d-block w-100" height="700px" width="400" src="{{ Storage::url($file) }}" alt="Gallery Image {{ $loop->iteration }} ">
             </div>
             @endforeach
         </div>
