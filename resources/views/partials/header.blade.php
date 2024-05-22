@@ -68,7 +68,7 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <td style="padding: 40px; text-align: left; color: #FFF;">
-                    <a href=""><img src="\assets\img\DAW_logo.JPG"style="width: 120px;" alt="Thats a Wrap"></a>
+                    <a href=""><img src="{{ url('\assets\img\DAWlogo.png') }}"style="width: 120px;" alt="Thats a Wrap"></a>
                 </td>
                 <!-- <a class="navbar-brand" href="#page-top">Start Bootstrap</a> -->
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
