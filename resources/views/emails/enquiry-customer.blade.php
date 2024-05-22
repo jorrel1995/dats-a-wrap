@@ -31,7 +31,7 @@
                                 <table align="center" width="600" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <td style="text-align: left; width: 600px;">
-                                            <a href="{{ env('APP_URL') }}"><img class="logo" src="https://backslash.fra1.cdn.digitaloceanspaces.com/euro_2024_sweepstake/images/email_header.png" alt="Clevercherry Euro 2024 2022"></a>
+                                            <a href=""><img class="logo" src="" alt="Clevercherry Euro 2024 2022"></a>
                                         </td>
                                     </tr>
                                 </table>
@@ -40,9 +40,9 @@
                     </table>
 
 
-                    <table bgcolor="#020C3D" width="600" style="background: #020C3D;" border="0" cellspacing="0" cellpadding="0">
+                    <table bgcolor="#000000" width="600" style="background: #000000;" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                            <td style="padding: 40px; text-align: left;">
+                            <td style="padding: 40px; text-align: center;">
                                 <span style="font-size:16px ; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #ffffff;">
                                     <h2>Thank you for your enquiry.</h2>
                                     <p>You’ve been selected to take part in a Euro 2024 Sweepstake.</p>
@@ -54,13 +54,23 @@
                         </tr>
                     </table>
 
-                   <table bgcolor="#FFFFFF" width="600" style="background: #FFFFFF; border-bottom:  10px solid #43B082; width: 600px;" border="0" cellspacing="0" cellpadding="0">
+                   <table bgcolor="#000000" width="600" style="background: #000000; border-bottom:  10px solid #43B082; width: 600px;" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                               <td style="padding: 40px; text-align: left; color: #FFF;">
-                                    <p>Kind regards,<br>
-                                         Dats A Wrap</p>
-                                    <a href="https://clevercherry.com"><img src="{{url('/assets/img/DAW_logo.JPG')}}"style="width: 120px;" alt="Thats a Wrap"></a>
+                                   <a href="https://clevercherry.com"><img src=""style="width: 120px;" alt="Thats a Wrap"></a>
                              </td>
+                             <td class="social" style="padding: 10px; width: 25%;">
+                                            <a href="" class="social-icon"><img src="" alt="Instagram" style="width: 50px;"></a>
+                                        </td>
+                                        <td class="social" style="padding: 10px; width: 25%;">
+                                            <a href="" class="social-icon"><img src="" alt="Twitter" style="width: 50px;"></a>
+                                        </td>
+                                        <td class="social" style="padding: 10px; width: 25%;">
+                                            <a href="" class="social-icon"><img src="" alt="Facebook" style="width: 50px;"></a>
+                                        </td>
+                                        <td class="social" style="padding: 10px; width: 25%;">
+                                            <a href="" class="social-icon"><img src="" alt="Linked In" style="width: 50px;"></a>
+                                        </td>
                         </tr>
                     </table>
                     </td>

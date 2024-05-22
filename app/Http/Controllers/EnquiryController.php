@@ -11,8 +11,6 @@ use Illuminate\Support\Facades\Auth;
 
 class EnquiryController extends Controller
 {
-
-
     /**
      * Stores a new enquiry
      * @param Request $request
@@ -25,7 +23,7 @@ class EnquiryController extends Controller
             if (!$captcha) {
                 return redirect()->back()->with('danger', 'Sorry, we were unable to submit your request. Please try again and contact us if this error persists.');
             }
-            $store = $request->except('_token');
+            $store = $request->except('_token' , 'token');
 
             $item = Model::create($store);
 

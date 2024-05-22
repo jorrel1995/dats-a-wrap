@@ -1,259 +1,84 @@
+<html>
 <head>
-    <title>Dats A Wrap Enquiry</title>
-    <style type="text/css">
-    @import url("https://use.typekit.net/ije4get.css");
-    body {
-        background: #eef1f4;
-        font-family: 'open-sans', sans-serif;
-        font-size: 12px;
-        line-height: 18px;
-        margin: 0;
-        padding: 0;
-    }
-    a { color: #333333 ; text-decoration: none;}
-    a:hover { color: #000000;}
-    p {
-        display: block;
-        margin:0;
-        margin-bottom:0;
-        -webkit-margin-before: 0em;
-        -webkit-margin-after: 0em;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
-    }
-    img  { border: none; display: block; }
-    .center {
-        text-align: center;
-    }
-    .header {
-        color: #ffffff;
-        font-family: 'open-sans', sans-serif;
-        font-size: 30px;
-        letter-spacing: 3px;
-        line-height: 36px;
-        padding: 20px 0 20px 0;
-        text-transform: uppercase;
-    }
-    .header-link {
-        color: #e7adbd;
-        font-family: 'open-sans', sans-serif;
-        font-size: 12px;
-        line-height: 18px;
-        padding-top: 15px;
-        text-decoration: none;
-    }
-    .sub-title {
-        font-weight: 700;
-    }
-    .header-link:hover {
-        color: #ffffff;
-        font-family: 'open-sans', sans-serif;
-        font-size: 12px;
-        line-height: 18px;
-        text-decoration: none;
-    }
-    .header-copy {
-        color: #ffffff;
-        font-size: 22px;
-        font-family: 'open-sans', sans-serif;
-        letter-spacing: 1px;
-        line-height: 28px;
-        padding-bottom: 30px;
-    }
-    .header-copy-italic {
-        color: #ffffff;
-        font-family: 'open-sans', sans-serif;
-        font-size: 22px;
-        font-style: italic;
-        font-weight: bold;
-        letter-spacing: 1px;
-        line-height: 28px;
-    }
-    .copy {
-        color: #6c4863;
-        font-family: 'open-sans', sans-serif;
-        font-size: 22px;
-        letter-spacing: 1px;
-        line-height: 28px;
-    }
-    .copy > a {
-        color: #829070;
-        font-weight: 700;
-    }
-    .copy-padding {
-        padding: 40px 0 35px 0;
-    }
-    .copy-italic {
-        color: #6c4863;
-        font-family: 'open-sans', sans-serif;
-        font-size: 22px;
-        font-style: italic;
-        font-weight: bold;
-        letter-spacing: 1px;
-        line-height: 28px;
-    }
-    .copy-title {
-        color: #6c4863;
-        font-family: 'open-sans', sans-serif;
-        font-size: 20px;
-        font-weight: bold;
-        letter-spacing: 2px;
-        line-height: 28px;
-        padding-bottom: 20px;
-        text-transform: uppercase;
-    }
-    .break {
-        padding: 30px 0 30px 0;
-    }
-    .break-two {
-        padding: 20px 0 20px 0;
-    }
-    .bottom {
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-    }
-    .footer-header {
-        color: #ffffff;
-        font-family: 'open-sans', sans-serif;
-        font-size: 22px;
-        letter-spacing: 3px;
-        line-height: 36px;
-        padding: 40px 0 20px 0;
-        text-transform: uppercase;
-    }
-    .space-top {
-        padding: 40px 0 20px 0;
-    }
-    .footer-copy {
-        color: #6c4863;
-        font-family: 'open-sans', sans-serif;
-        font-size: 14px;
-        letter-spacing: 1px;
-        line-height: 20px;
-        padding: 0 0 30px 0;
-    }
-    .social {
-        padding: 10px;
-        width: 50%;
-    }
-    .smallprint {
-        color: #e7adbd;
-        font-family: 'open-sans', sans-serif;
-        font-size: 14px;
-        letter-spacing: 1px;
-        line-height: 16px;
-        padding-bottom: 20px;
-    }
-    .logo {
-        padding-top: 25px;
-        padding-bottom: 15px;
-        padding-left: 30px;
-        width: 250px;
-    }
-    .bold {
-        font-weight: 700;
-    }
-    .logo img {
-        height: 120px;
-    }
-    .social {
-        text-align: right;
-        width: 250px;
-    }
-    .social img {
-         display: inline;
-        height: 25px;
-        padding-left: 20px;
-    }
-    .link {
-        color: #e7adbd;
-        text-decoration: none;
-    }
-    .link:hover {
-        color: #ffffff;
-        text-decoration: none;
-    }
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style>
+        body {
+            background: #e3e3e3;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0 auto !important;
+            Margin: 0; /* Outlook hack */
+            min-width: 100%;
+            padding: 0;
+            color: #343434;
+        }
+        img  { border: none; display: block; }
+        .logo {
+            width: 600px;
+        }
+        a {
+            color: #fff;
+        }
     </style>
-    <!--[if gte mso 9]>
-        <xml>
-            <o:OfficeDocumentSettings>
-                <o:AllowPNG/>
-                <o:PixelsPerInch>96</o:PixelsPerInch>
-         </o:OfficeDocumentSettings>
-        </xml>
-    <![endif]-->
-    </head>
-<body>
-    <div style="background: #ececec; height:100%; width:100%; margin:auto;">
-        <table bgcolor="#ececec" width="100%" border="0" cellspacing="0" cellpadding="0">
+</head>
+<body style="padding: 0; margin: 0;">
+    <div style="background: #e3e3e3; height:100%; width:100%; margin:auto;">
+        <table bgcolor="#ffffff" width="100%" border="0" cellspacing="0" cellpadding="0" style="background: #e3e3e3;">
             <tr>
-                <td bgcolor="#ececec" align="center">
-                    <table width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: rgba(255, 255, 255, 0.95);   width: 600px;">
+                <td bgcolor="#e3e3e3" align="center" style="background: #e3e3e3;">
+                    <table bgcolor="#1A32B6" width="600" style="background: #1A32B6; width: 600px;" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                            <td class="logo">
-                                <a href="http://tnscatering.cherrytest.com/images/tns-logo.svg"><img src="http://tnscatering.cherrytest.com/images/tns-logo.svg"></a>
+                            <td>
+                                <table align="center" width="600" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td style="text-align: left; width: 600px;">
+                                            <a href=""><img class="logo" src="" alt="Clevercherry Euro 2024 2022"></a>
+                                        </td>
+                                    </tr>
+                                </table>
                             </td>
-                            <td class="social">
+                        </tr>
+                    </table>
 
-                               </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-        <table bgcolor="#ececec" width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td bgcolor="#ececec" align="center" style="padding-top: 2px;">
-                    <table width="600" style="background-color: #fff; color: #fff; padding: 0px 30px; width: 600px; text-align: left;" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td class="copy copy-padding" style="color: #6c4863; font-family: 'open-sans', sans-serif; font-size: 18px; letter-spacing: 1px; line-height: 28px; padding: 40px 0 20px 0;">
-                                You have an new enquiry.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="copy list-padding" style="color: #6c4863; font-family: 'open-sans', sans-serif; font-size: 18px; letter-spacing: 1px; line-height: 28px; padding: 0 0 5px 0;">
-                                @if(!empty ($request->full_name))
-                                <span class="sub-title">Name:</span> {{ $request->full_name }}
-                                @endif
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="copy list-padding" style="color: #6c4863; font-family: 'open-sans', sans-serif; font-size: 18px; letter-spacing: 1px; line-height: 28px; padding: 0 0 5px 0;">
-                                @if(!empty ($request->email))
-                                <span class="sub-title">Email:</span> {{ $request->email }}
-                                @endif
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="copy list-padding" style="color: #6c4863; font-family: 'open-sans', sans-serif; font-size: 18px; letter-spacing: 1px; line-height: 28px; padding: 0 0 5px 0;">
-                                @if(!empty ($request->phone))
-                                <span class="sub-title">Phone Number:</span> {{ $request->phone }}
-                                @endif
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="copy list-padding" style="color: #6c4863; font-family: 'open-sans', sans-serif; font-size: 18px; letter-spacing: 1px; line-height: 28px; padding: 0 0 25px 0;">
-                                @if(!empty ($request->message))
-                                <span class="sub-title">Message:</span> {{ $request->message }}
-                                @endif
-                            </td>
-                        </tr>
-                    </table>
-                <td>
-            </tr>
-        </table>
 
-        <table bgcolor="#ececec" width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <td bgcolor="#ececec" align="center" style="padding-top: 2px;">
-                    <table width="600" style="background-color: #fff; color: #fff; padding: 0px 30px; width: 600px; text-align: left;" border="0" cellspacing="0" cellpadding="0">
+                    <table bgcolor="#000000" width="600" style="background: #000000;" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                            <!-- <td class="footer-copy space-top" style="color: #6c4863; font-family: 'open-sans', sans-serif; font-size: 14px; letter-spacing: 1px; line-height: 20px; padding: 40px 0 30px 0;"><p>T: <a href="tel:01926335444">01926 335 444</a>&nbsp;&nbsp;|&nbsp;&nbsp;E: <a href="mailto:sales@tnscatering.co.uk">sales@tnscatering.co.uk</a></p> -->
-                            <!-- </td> -->
+                            <td style="padding: 40px; text-align: center;">
+                                <span style="font-size:16px ; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #ffffff;">
+                                    <h2>You have received a new enquiry!</h2>
+                                    <p>Name: {{ $request->full_name }}</p>
+                                    <p>Email: {{ $request->email }}</p>
+                                    <p>Phone: {{ $request->phone }}</p>
+                                    <p>Message: {{ $request->message }}</p>
+                                </span>
+                            </td>
                         </tr>
                     </table>
-                </td>
-            </tr>
-        </table>
-    </div>
-</body>
+
+                   <table bgcolor="#000000" width="600" style="background: #000000; border-bottom:  10px solid #43B082; width: 600px;" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                              <td style="padding: 40px; text-align: left; color: #FFF;">
+                                   <a href=""><img src=""style="width: 120px;" alt="Thats a Wrap"></a>
+                             </td>
+                             <td class="social" style="padding: 10px; width: 25%;">
+                                            <a href="" class="social-icon"><img src="" alt="Instagram" style="width: 50px;"></a>
+                                        </td>
+                                        <td class="social" style="padding: 10px; width: 25%;">
+                                            <a href="" class="social-icon"><img src="" alt="Twitter" style="width: 50px;"></a>
+                                        </td>
+                                        <td class="social" style="padding: 10px; width: 25%;">
+                                            <a href="" class="social-icon"><img src="" alt="Facebook" style="width: 50px;"></a>
+                                        </td>
+                                        <td class="social" style="padding: 10px; width: 25%;">
+                                            <a href="" class="social-icon"><img src="" alt="Linked In" style="width: 50px;"></a>
+                                        </td>
+                        </tr>
+                    </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
+
+
+
