@@ -34,16 +34,15 @@
                                     <i class="fas fa-long-arrow-alt-right float-right mt-1"></i>
                                 </button>
                             </div>
+                            @if(Session::has('success'))
+                              {!! Session::get('success') !!}
+                             @endif
+
+
+                        @if(Session::has('danger'))
+                           {!! Session::get('danger') !!}
+                        @endif
                     </form>
             </div>
         </div>
     </div>
-
-    @if(Session::has('success'))
-                    {!! Session::get('success') !!}
-    @endif
-
-
-    @if(Session::has('danger'))
-                    {!! Session::get('danger') !!}
-    @endif
