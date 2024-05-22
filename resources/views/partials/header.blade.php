@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-       <title>{{ $page->title }}</title>
+       <title>{{ $page->title }} </title>
         <meta name="description" content="{!! $page->meta_description !!}">
         <script src="https://www.google.com/recaptcha/api.js?render=6Ld8BN4pAAAAAJzVLVMCYcUtUfuQN89c3iXxhotO"></script>
         <!-- Bootstrap CSS -->
@@ -67,7 +67,10 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <td style="padding: 40px; text-align: left; color: #FFF;">
+                    <a href=""><img src="{{ url('\assets\img\DAWlogo.png') }}"style="width: 120px;" alt="Thats a Wrap"></a>
+                </td>
+                <!-- <a class="navbar-brand" href="#page-top">Start Bootstrap</a> -->
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">

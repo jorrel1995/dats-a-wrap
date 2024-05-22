@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Enquiry;
-use App\Mail\EnquiryCustomer as EnquiryCustomer;
+use App\Mail\EnquiryInternal as EnquiryInternal;
 
 
 /*
@@ -17,8 +17,8 @@ use App\Mail\EnquiryCustomer as EnquiryCustomer;
 */
 
 Route::get('/mail-preview', function () {
-    $order = App\Models\Enquiry::where('id', 3018)->first();
-    return new App\Mail\EnquiryCustomer($order);
+    $order = App\Models\Enquiry::where('id', 1)->first();
+    return new App\Mail\EnquiryInternal($order);
 });
 
 Route::group(['prefix' => 'admin'], function () {

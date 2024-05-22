@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Enquiry extends Model
 {
     use HasFactory;
+    protected $fillable = ['full_name', 'phone', 'message', 'email'];
 
     /**
      * Returns a paginated list of all blog posts, defaults to 10 if no variable passed
