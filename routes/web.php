@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Enquiry;
+use App\Mail\EnquiryCustomer as EnquiryCustomer;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/mail-preview', function () {
+    $order = App\Models\Enquiry::where('id', 3018)->first();
+    return new App\Mail\EnquiryCustomer($order);
+});
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
