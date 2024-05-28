@@ -75,8 +75,12 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> -->
+                        @if(!empty($page->service_title))
+                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> 
+                        @endif
+                        @if(!empty($gallery))
                         <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                        @endif
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
