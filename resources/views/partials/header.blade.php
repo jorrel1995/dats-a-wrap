@@ -68,7 +68,7 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <td style="padding: 40px; text-align: left; color: #FFF;">
-                    <a href=""><img src="{{ url('\assets\img\DAWlogo.png') }}"style="width: 120px;" alt="Thats a Wrap"></a>
+                    <a href=""><img src="{{ url('\assets\img\DAWlogo.png') }}"style="width: 120px;" alt="Thats a Rap"></a>
                 </td>
                 <!-- <a class="navbar-brand" href="#page-top">Start Bootstrap</a> -->
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -82,6 +82,39 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Masthead-->
+       @if(in_array($bannerextension, Page::video_mime_types()))
+        <!-- style="background-image: url(' echo Storage::url($banner); ?>');" -->
+        <header class="masthead"  >
+        <video class="video-background" autoplay muted loop>
+                <source src="{{ url('\assets\img\test.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">{{ $page->title }}</h1>
+                        <hr class="divider" />
+                    </div>
+                </div>
+            </div>
+        </header>
+   
+        <style>
+ 
+            .video-background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+            }
+
+        </style>
+    @elseif(in_array($bannerextension, Page::image_mime_types()))
         <!-- Masthead-->
         <header class="masthead" style="background-image: url('<?php echo Storage::url($banner); ?>');">
             <div class="container px-4 px-lg-5 h-100">
@@ -93,5 +126,6 @@
                 </div>
             </div>
         </header>
+        @endif
    
  

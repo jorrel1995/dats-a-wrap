@@ -26,14 +26,33 @@ class PageController extends Controller
         }
         // Get all files from the specific folder
         $gallery = Storage::disk('public')->files('/pages/Home/Gallery');
-        $banner = Storage::disk('public')->files('/pages/Home/Banner') ? Storage::disk('public')->files('/pages/Home/Banner')[0] : '';
-        if(empty($files)) {
-            $files = [];
+
+        $contact_image = json_decode($page->contact_image);
+        $contact_image = $contact_image[0]->download_link;
+
+        if(!$contact_image){
+            $contact_image = '';
         }
-        
+
+
+        $banner = json_decode($page->banner);
+        $banner = $banner[0]->download_link;
+
+        if(!$banner){
+            $banner = '';
+        }
+
+        // Extract the file extension
+        $bannerextension = strtolower(pathinfo($banner, PATHINFO_EXTENSION));
+        if(!$bannerextension){
+            $bannerextension = '';
+        }
+
         return view('view')->with('slug', $slug)
             ->with('banner', $banner)
+            ->with('bannerextension', $bannerextension)
             ->with('gallery', $gallery)
             ->with('page', $page);
     }
+    
 }

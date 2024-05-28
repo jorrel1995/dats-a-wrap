@@ -31,7 +31,7 @@
                                 <table align="center" width="600" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                         <td style="text-align: left; width: 600px;">
-                                            <a href=""><img class="logo" src="" alt="Clevercherry Euro 2024 2022"></a>
+                                            <a href=""><img class="logo" src="" alt=""></a>
                                         </td>
                                     </tr>
                                 </table>
@@ -57,7 +57,7 @@
                    <table bgcolor="#000000" width="600" style="background: #000000; border-bottom:  10px solid #43B082; width: 600px;" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                               <td style="padding: 40px; text-align: left; color: #FFF;">
-                                   <a href=""><img src=""style="width: 120px;" alt="Thats a Wrap"></a>
+                                   <a href=""><img src=""style="width: 120px;" alt="Thats a Rap"></a>
                              </td>
                              <td class="social" style="padding: 10px; width: 25%;">
                                             <a href="" class="social-icon"><img src="" alt="Instagram" style="width: 50px;"></a>
