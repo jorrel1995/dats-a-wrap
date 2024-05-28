@@ -14,6 +14,7 @@ public static function image_mime_types()
 {
     return [
         'jpeg',
+        'jpg',
         'png',
         'gif',
         'bmp',

@@ -7,7 +7,10 @@
                 <a href="{{ setting('admin.instagram') }}" target="_blank" class="me-4"><i class="fab fa-instagram"></i></a>
                 @endif
                 @if(setting('admin.twitter'))
-                <a href="{{ setting('admin.twitter') }}" target="_blank" class="me-4"><i class="fab fa-twitter"></i></a>
+                <a href="{{ setting('admin.twitter') }}" target="_blank" class="me-4"><i class="fab fa-x-twitter"></i></a>
+                @endif
+                @if(setting('admin.linked_in'))
+                <a href="{{ setting('admin.linked_in') }}" target="_blank" class="me-4"><i class="fab fa-linkedin"></i></a>
                 @endif
             </div>
         </div>

@@ -27,11 +27,11 @@ class PageController extends Controller
         // Get all files from the specific folder
         $gallery = Storage::disk('public')->files('/pages/Home/Gallery');
 
-        $contact_image = json_decode($page->contact_image);
-        $contact_image = $contact_image[0]->download_link;
+        $contactimage = json_decode($page->contact_image);
+        $contactimage = $contactimage[0]->download_link;
 
-        if(!$contact_image){
-            $contact_image = '';
+        if(!$contactimage){
+            $contactimage = '';
         }
 
 
@@ -49,6 +49,7 @@ class PageController extends Controller
         }
 
         return view('view')->with('slug', $slug)
+            ->with('contactimage', $contactimage)
             ->with('banner', $banner)
             ->with('bannerextension', $bannerextension)
             ->with('gallery', $gallery)

@@ -3,7 +3,7 @@
             <!-- Image with Text (Left Column) -->
             <div class="col-md-6">
                 <div class="text-center">
-                    <img src="{{ Storage::url($page->image) }}" class="img-fluid" alt="Contact Form Image">
+                    <img src="{{ Storage::url($contactimage) }}" class="img-fluid" alt="Contact Form Image">
                 </div>
             </div>
             <!-- Form (Right Column) -->

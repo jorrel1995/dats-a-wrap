@@ -8,11 +8,10 @@
         <!-- End of about Section -->
        
        <!-- Services Section -->
-       <div id="services">
+       <!-- <div id="services">
             <div class="container-fluid p-0">
-                @include('partials.services')
             </div>
-        </div>
+        </div> -->
         <!-- End of Services Section -->
 
         <!-- Gallery Section -->
